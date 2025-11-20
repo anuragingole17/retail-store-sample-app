@@ -86,9 +86,9 @@ module "eks_addons" {
     ]
   }
 
-   =============================================================================
-   OPTIONAL: MONITORING STACK
-   =============================================================================
+  # =============================================================================
+ #  OPTIONAL: MONITORING STACK
+  # =============================================================================
    Uncomment below to enable monitoring (increases costs)
   
    enable_kube_prometheus_stack = var.enable_monitoring
@@ -97,9 +97,9 @@ module "eks_addons" {
      namespace   = "monitoring"
    }
 
-   =============================================================================
-   OPTIONAL: AWS LOAD BALANCER CONTROLLER
-   =============================================================================
+  # =============================================================================
+  # OPTIONAL: AWS LOAD BALANCER CONTROLLER
+  # =============================================================================
    enable_aws_load_balancer_controller = true
    aws_load_balancer_controller = {
      most_recent = true
