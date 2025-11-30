@@ -100,19 +100,17 @@ module "eks_addons" {
   # =============================================================================
   # OPTIONAL: AWS LOAD BALANCER CONTROLLER
   # =============================================================================
-   # =============================================================================
-# OPTIONAL: AWS LOAD BALANCER CONTROLLER
-# =============================================================================
-enable_aws_load_balancer_controller = true
-aws_load_balancer_controller = {
-  most_recent = true
-  namespace   = "kube-system"
+  
+    enable_aws_load_balancer_controller = true
+    aws_load_balancer_controller = {
+    most_recent = true
+    namespace   = "kube-system"
 
-  values = [
-    {
+    values = [
+     {
       clusterName = module.retail_app_eks.cluster_name
       region      = var.region
       vpcId       = module.vpc.vpc_id
-    }
-  ]
-}
+      }
+     ]
+   }
