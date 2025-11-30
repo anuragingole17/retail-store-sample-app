@@ -114,4 +114,5 @@ module "eks_addons" {
       }
      ]
    }
+      depends_on = [module.retail_app_eks]
 }
