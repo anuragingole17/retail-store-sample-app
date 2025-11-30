@@ -114,3 +114,4 @@ module "eks_addons" {
       }
      ]
    }
+}
